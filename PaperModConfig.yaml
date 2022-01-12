@@ -1,0 +1,20 @@
+baseURL: 'https://isiko.github.io/'
+languageCode: en-us
+title: isi_ko404's Homepage
+theme: paperMod
+
+params:
+    profileMode:
+        enabled: true
+        title: "Welcome to My Homepage!" # optional default will be site title
+        subtitle: "I hope you Like it :)"
+        imageUrl: "profile.png" # optional
+        imageTitle: "Normaly here should be an Image :/" # optional
+        imageWidth: 120 # custom size
+        imageHeight: 120 # custom size
+
+    socialIcons: # optional
+      - name: "Twitter"
+        url: "https://twitter.com/isi_ko404"
+      - name: "Github"
+        url: "https://github.com/isiko"

@@ -1,0 +1,9 @@
+[submodule "themes/terminal"]
+	path = themes/terminal
+	url = https://github.com/panr/hugo-theme-terminal.git
+[submodule "themes/paperMod"]
+	path = themes/paperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "isiko.github.io"]
+	path = isiko.github.io
+	url = https://github.com/isiko/isiko.github.io.git
