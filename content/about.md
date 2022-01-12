@@ -1,7 +1,6 @@
 ---
 title: "About this Site"
-date: 2022-01-12T00:22:10+01:00
-draft: true
+draft: false
 ---
 # Hey!
 You made it to my homepage! I hope there's a bit more content here when you see this, because I tend to put stuff off :D
