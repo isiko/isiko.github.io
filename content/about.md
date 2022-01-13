@@ -9,4 +9,4 @@ On this site I'll try to write a little bit about my projects, so if there's not
 But I should probably introduce myself first. I'm Isaac, a student from NRW who has a lot of fun programming and publishing his results on Github.
 On this page I will post updates about my projects and eventually about me and what I'm doing. 
 
-You can reach me at 'koerner@informatik-ag.net', so write me an E-Mail about how you found my Page and what you think about it
+You can find my contact info [here](/contact) so if you want, you can tell me how you found me and what you think about the Site :)
