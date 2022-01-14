@@ -74,15 +74,6 @@ publishdir = "isiko.github.io"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        identifier = "projects"
-        name = "projects"
-        url = "/projects"
-      [[languages.en.menu.main]]
-        identifier = "posts"
-        name = "posts"
-        url = "/posts"
-      
-      [[languages.en.menu.main]]
         identifier = "about"
         name = "about"
         url = "/about"
@@ -91,13 +82,8 @@ publishdir = "isiko.github.io"
         identifier = "contact"
         name = "contact"
         url = "/contact"
-        
-      # [[languages.en.menu.main]]
-      #   identifier = "2twitter"
-      #   name = "twitter"
-      #   url = "https://twitter.com/isi_ko404"
-      # [[languages.en.menu.main]]
-      #   identifier = "2GitHub"
-      #   name = "github"
-      #   url = "https://github.com/isiko"
-        
+
+      [[languages.en.menu.main]]
+        identifier = "projects"
+        name = "projects"
+        url = "/projects"
