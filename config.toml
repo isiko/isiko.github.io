@@ -11,7 +11,7 @@ publishdir = "isiko.github.io"
   contentTypeName = "projects"
 
   # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "pink"
+  themeColor = "c101"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 4
