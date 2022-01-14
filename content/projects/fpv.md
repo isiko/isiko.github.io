@@ -2,7 +2,7 @@
 title: "Flying FPV"
 author: "Isaak"
 date: 2022-01-13T09:27:26+01:00
-draft: true
+draft: false
 authorTwitter: "isi_ko404"
 cover: "/fpv.header.jpg"
 tags: ["fpv", "drone", "hardware"]
@@ -29,6 +29,8 @@ A few weeks later. My friend who had sent me the video was asked to produce an i
 
 {{< figure src="/fpv.testFlight.jpg" alt="The Drone, flying over a grass field" position="center" caption="Of course we had to take it for a test flight" >}}
 
-That was when I started looking for a drone for myself. I knew I couldn't afford a DJI FPV, but there had to be an option for me, and there was! I ended up getting what is called a Tiny Whoop. These drones are no bigger than the palm of your hand, but this allows them to be flown indoors and near people, which is great because then you can practice around the house without potentially losing the drone in a field. They are also incredibly cheap, I paid around 160€ for a complete kit with goggles, a remote control and the drone, while the bigger drones usually start at around 300€.
+That was when I started looking for a drone for myself. I knew I couldn't afford a DJI FPV, but there had to be an option for me, and there was! I ended up getting what is called a Tiny Whoop. These drones are no bigger than the palm of your hand, but this allows them to be flown indoors and near people, which is great because then you can practice around the house without potentially losing the drone in a field. They are also incredibly cheap, I paid around 160€ for a complete kit with [goggles](https://betafpv.com/products/vr02-fpv-goggles), a [remote control](https://betafpv.com/products/literadio-2-se-radio-transmitter) and the [drone](https://betafpv.com/products/beta65s-bnf-micro-whoop-quadcopter), while the bigger drones usually start at around 300€.
 
-So I started flying indoors, annoying my family, starting to get the hang of it as I slowly dismantled the drone in the process.
+So I started flying indoors and annoying my family while I slowly dismantled the drone. Eventually, though, I wanted to do more. The problem was that you can't really do any tricks with these tiny drones because they don't have the power to catch themselves after a short fall. They also lose momentum pretty quickly because of their light weight and if you wan't to do some long range stuff with them, no chanche because there isn't enough place to but a decent reciever on these tiny tiny drones. So I went ahead and got a full 5" Quad. There were a few problems with the receiver and I had to change my radio, but now I can even fly a bit far as long as there is a clear view.
+
+And this is exactly where I am now! Right now I'm flying more in the simulator because it's pretty cold out right now, but come summer I'll be back in the field, at least I hope so. I'll try to post updates here when something interesting happens.
