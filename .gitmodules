@@ -1,6 +1,3 @@
 [submodule "terminal_theme"]
 	path = themes/terminal
 	url = https://github.com/panr/hugo-theme-terminal.git
-[submodule "isiko.github.io"]
-	path = isiko.github.io
-	url = https://github.com/isiko/isiko.github.io.git
