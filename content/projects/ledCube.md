@@ -33,7 +33,7 @@ Using these latches, you could think of two rather simple ways to address your p
 # Schematics and PCB-Design
 When we put all of this together, we get the following Schematics:
 
-{{< figure src="/img/posts/ledCube.schematic.png" alt="The complete Schematics" position="center" caption="The Complete schematics" >}}
+{{< figure src="/img/posts/ledCube/schematic.png" alt="The complete Schematics" position="center" caption="The Complete schematics" >}}
 
 They might look a bit strange, for example the big box at the Bottom represents the LEDs, but this has a reason. As I try to learn something new with eatch project, I wanted to try and design a PCB for this one and because of that I was using Eagle for the schematics. Actually, I didn't just do this because of the learning factor, I also didn't want to deal with a jungle of jumper wires.
 
