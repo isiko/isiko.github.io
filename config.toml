@@ -2,7 +2,7 @@ baseURL = "https://isiko.github.io/"
 languageCode = "en-us"
 title = "isiko404"
 theme = "terminal"
-publishdir = "isiko.github.io"
+publishdir = "docs"
 
 # Terminal
 [params]
