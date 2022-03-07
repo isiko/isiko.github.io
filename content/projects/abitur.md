@@ -1,7 +1,7 @@
 ---
 title: "Abitur - Computer Science"
 date: 2022-03-01T00:00:00+01:00
-draft: true
+draft: false
 authorTwitter: "isi_ko404"
 cover: "/img/covers/abitur.jpg"
 tags: ["school"]
