@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Graphen on isiko404's Homepage</title><link>https://isiko.github.io/tags/graphen/</link><description>Recent content in Graphen on isiko404's Homepage</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 07 Mar 2022 00:00:00 +0100</lastBuildDate><atom:link href="https://isiko.github.io/tags/graphen/index.xml" rel="self" type="application/rss+xml"/><item><title>Graphentheorie</title><link>https://isiko.github.io/projects/abitur/computer-science/graphentheorie/</link><pubDate>Mon, 07 Mar 2022 00:00:00 +0100</pubDate><guid>https://isiko.github.io/projects/abitur/computer-science/graphentheorie/</guid><description>Traversierung Geht den ganzen Graphen ab. Kann auch zur Suche eines Knotens benutzt werden. Kann Theoretisch auch als Routenplaner verwendet werden
+Breiten Traversierung Kommt noch
+Tiefen Traversierung Kommt noch
+Minimal-Spanning Tree Generiert eine Version des gegebenen Graphens, der alle Knoten umfasst, allerdings nur das absolute Minimum an Kanten enthält (nach Gewicht)
+Kruskal Kanten nach Gewicht sortieren Jede Kante Prüfen Wenn durch das einsetzen der Kante in den neuen Graphen kein Kreis entsteht: einsetzten Ansonsten Löschen Bei einem getrennten Graphen wird auch der Output getrennt sein.</description><content>&lt;h1 id="traversierung">Traversierung&lt;/h1>
+&lt;p>Geht den ganzen Graphen ab. Kann auch zur Suche eines Knotens benutzt werden. Kann Theoretisch auch als Routenplaner verwendet werden&lt;/p>
+&lt;h2 id="breiten-traversierung">Breiten Traversierung&lt;/h2>
+&lt;p>Kommt noch&lt;/p>
+&lt;h2 id="tiefen-traversierung">Tiefen Traversierung&lt;/h2>
+&lt;p>Kommt noch&lt;/p>
+&lt;h1 id="minimal-spanning-tree">Minimal-Spanning Tree&lt;/h1>
+&lt;p>Generiert eine Version des gegebenen Graphens, der alle Knoten umfasst, allerdings nur das absolute Minimum an Kanten enthält (nach Gewicht)&lt;/p>
+&lt;h2 id="kruskal">Kruskal&lt;/h2>
+&lt;ol>
+&lt;li>Kanten nach Gewicht sortieren&lt;/li>
+&lt;li>Jede Kante Prüfen
+&lt;ul>
+&lt;li>Wenn durch das einsetzen der Kante in den neuen Graphen kein Kreis entsteht: einsetzten&lt;/li>
+&lt;li>Ansonsten Löschen
+Bei einem getrennten Graphen wird auch der Output getrennt sein.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="prim">Prim&lt;/h2>
+&lt;ol>
+&lt;li>Zufällige Startposition wählen und Markieren&lt;/li>
+&lt;li>Von allen Markierten Knoten die Günstigste Verbindung zu einem Nicht Markierten Knoten suchen und einsetzen&lt;/li>
+&lt;li>Schritt 2 solange wieder holen, bis alle Knoten Markiert sind
+Bei einem Getrennten Graphen wird Prim irgendwann in einer Endlosschleife sein.&lt;/li>
+&lt;/ol>
+&lt;h1 id="routenplanung">Routenplanung&lt;/h1>
+&lt;p>Noch kein Optimaler Algorithmus gefunden&lt;/p>
+&lt;h2 id="dijkstra">Dijkstra&lt;/h2>
+&lt;ol>
+&lt;li>Alle Allen Knoten den Abstand ∞ zu weisen&lt;/li>
+&lt;li>Dem Startknoten den Wert 0 zu weisen&lt;/li>
+&lt;li>den Startknoten zum aktuellen Knoten machen&lt;/li>
+&lt;li>Falls ein Nachbarknoten einen höheren Abstand als der Abstand des eigenen Knoten + das Kantengewicht zum NAchbarknoten hat, diesen Wert erneuern&lt;/li>
+&lt;li>Selbiges auch Umgekehrt ausführen&lt;/li>
+&lt;li>Den aktuellen Knoten Markieren&lt;/li>
+&lt;li>Falls der Aktuelle Knoten nicht das Ziel war, den nicht markierten Knoten der den niedrigsten Abstand hat zum Aktuellen Knoten machen. Ansonsten Abbrechen&lt;/li>
+&lt;li>Zurück zu Schritt 4&lt;/li>
+&lt;/ol></content></item></channel></rss>

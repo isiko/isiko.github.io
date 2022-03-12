@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Automate on isiko404's Homepage</title><link>https://isiko.github.io/tags/automate/</link><description>Recent content in Automate on isiko404's Homepage</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 07 Mar 2022 00:00:00 +0100</lastBuildDate><atom:link href="https://isiko.github.io/tags/automate/index.xml" rel="self" type="application/rss+xml"/><item><title>Automatentheorie</title><link>https://isiko.github.io/projects/abitur/computer-science/automatentheorie/</link><pubDate>Mon, 07 Mar 2022 00:00:00 +0100</pubDate><guid>https://isiko.github.io/projects/abitur/computer-science/automatentheorie/</guid><description>Formale Sprachen und Grammatiken A sei ein Alphabet. Eine endlich Folge von Zeichen ∈ A heißt Wort. Das leere Wort ε besteht aus null Zeichen. A* ist die Menge aller endlich langer Wörter über A. Jede Teilmenge L von A*heißt formale Sprache über dem Alphabet A.
+Schriftlich sähe das dann so aus:
+A = {0|1} x = 01101
+Grammatiken Grammatika sind Regeln nach denen Wörter Produziert werden können. Sie werden als 4-Tupel angegeben:</description><content>&lt;h1 id="formale-sprachen-und-grammatiken">Formale Sprachen und Grammatiken&lt;/h1>
+&lt;p>&lt;code>A&lt;/code> sei ein Alphabet. Eine endlich Folge von Zeichen ∈ A heißt &lt;code>Wort&lt;/code>. Das &lt;code>leere Wort&lt;/code> &lt;code>ε&lt;/code> besteht aus null Zeichen. &lt;code>A*&lt;/code> ist die Menge aller &lt;em>endlich&lt;/em> langer Wörter über A. Jede Teilmenge &lt;code>L&lt;/code> von &lt;code>A*&lt;/code>heißt &lt;code>formale Sprache&lt;/code> über dem Alphabet &lt;code>A&lt;/code>.&lt;/p>
+&lt;p>Schriftlich sähe das dann so aus:&lt;/p>
+&lt;blockquote>
+&lt;p>A = {0|1} x = 01101&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="grammatiken">Grammatiken&lt;/h2>
+&lt;p>Grammatika sind Regeln nach denen Wörter Produziert werden können. Sie werden als 4-Tupel angegeben:&lt;/p>
+&lt;blockquote>
+&lt;p>G = (Vt, Vn, S, P)&lt;/p>
+&lt;/blockquote>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Bezeichnung&lt;/th>
+&lt;th>Zeichen&lt;/th>
+&lt;th>Beispiel&lt;/th>
+&lt;th>Beschreibung&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Terminalsymbole&lt;/td>
+&lt;td>Vt&lt;/td>
+&lt;td>{m, ä, h, !}&lt;/td>
+&lt;td>Das Alphabet aus dem später die Wörter gebildet werden. Terminale sind meist Kleinbuchstaben&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Non-Terminalsymbole&lt;/td>
+&lt;td>Vn&lt;/td>
+&lt;td>{S, A, B}&lt;/td>
+&lt;td>Vergleichbar mit den Zuständen er Automaten. Nonterminale sind meist Großbuchstaben&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Startsymbol&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>S&lt;/td>
+&lt;td>Vergleichbar mit dem Startzustand der Automaten&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Produktionsregeln&lt;/td>
+&lt;td>P&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Ähnlich zu &lt;code>d&lt;/code> bei den Automaten. Jedem Non-Terminalsymbol wird hier eine Kombination aus Terminal und Non-Terminalsymbolen zugewiesen, wobei weder noch zwingen notwendig sind&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>P kann wie folgt aufgeschrieben werden:&lt;/p>
+&lt;blockquote>
+&lt;p>S -&amp;gt; mAB!
+A -&amp;gt; ä | äA
+B -&amp;gt; h | hB&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="chomsky-hierarchie">Chomsky-Hierarchie&lt;/h2>
+&lt;p>Chomsky und Schützenberg definierten eine Hierachie der Formalen Sprachen. Es gibt 4 Stufen, wobei die unterste (Typ 0) jegliche Sprachen umfasst. Jede sprache des Typs n ist auch teil des Typs n-1. Je höher der Typ, dessdo einfacher zu erkennen sind die Sprachen&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Typ&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>Beschreibung&lt;/th>
+&lt;th>Benötigte Technik&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>0&lt;/td>
+&lt;td>allgemeine Chomsky Grammatik&lt;/td>
+&lt;td>alle Formalen Grammatiken&lt;/td>
+&lt;td>Turing Maschiene&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>kontextsensitive Grammatik&lt;/td>
+&lt;td>Nonterminale müssen durch zeichen ersetztwerden. Nur das leere Wort ist zugelassen&lt;/td>
+&lt;td>Turing Maschiene&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>kontextfreie Grammatik&lt;/td>
+&lt;td>Jede Produktionsregel hat als Input nur genau ein Nonterminal&lt;/td>
+&lt;td>Kellerautomat&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>Reguläre Grammatiken&lt;/td>
+&lt;td>Jede Produktionsregel muss als output nur genau 1 Terminal haben, und nur wenn das Terminal nicht &lt;code>ε&lt;/code> ist darf auch ein Nonterminal dabei sein.&lt;/td>
+&lt;td>DEA / NEA&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="reguläre-sprachen">Reguläre Sprachen&lt;/h3>
+&lt;p>Reguläre Sprachen können entweder &lt;code>linkslinear&lt;/code> oder &lt;code>rechtslinear&lt;/code> sein. &lt;code>Rechtslineare&lt;/code> Sprachen werden auch als &lt;code>reguläre&lt;/code> Sprachen bezeichnet&lt;/p>
+&lt;h1 id="automaten">Automaten&lt;/h1>
+&lt;ul>
+&lt;li>Erhält Wort als Eingabe und gibt zurück ob er das Wort Akzeptiert oder nicht
+&lt;ul>
+&lt;li>-&amp;gt; auch &lt;code>Akzeptor&lt;/code> genannt&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Menge der vom Automaten akzeptierten Wörter -&amp;gt; vom Automaten Definierte Sprache
+&lt;ul>
+&lt;li>Durch endliche Automaten erkannte Sprachen sind Regulär (Also Typ-3)&lt;/li>
+&lt;li>Durch Kellerautomaten erkannte Sprachen sind Kontext-Frei (Also Typ-2)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Besteht aus mehereren Zuständen und übergängen zwischen de
+&lt;ul>
+&lt;li>Vergleichbar mit &lt;code>Non-Terminalen&lt;/code> und &lt;code>Produktionsregeln&lt;/code> der Grammatiken&lt;/li>
+&lt;li>Können als Graph oder Tabelle verschriftlicht werden&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="dea-determinitstischer-endlicher-automat">DEA (Determinitstischer Endlicher Automat)&lt;/h2>
+&lt;ul>
+&lt;li>Pro Wort gibt es nur einen Weg der durch den Automaten genommen werden kann&lt;/li>
+&lt;li>Wird als 5-Tupel geschrieben&lt;/li>
+&lt;li>&lt;code>ε&lt;/code> ist als Vokabel NICHT erlaubt&lt;/li>
+&lt;/ul>
+&lt;h3 id="darstellung">Darstellung&lt;/h3>
+&lt;blockquote>
+&lt;p>M = (Z, A, d, q0, E)&lt;/p>
+&lt;/blockquote>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Bezeichnung&lt;/th>
+&lt;th>Zeichen&lt;/th>
+&lt;th>Beispiel&lt;/th>
+&lt;th>Beschreibung&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Zustandsmenge&lt;/td>
+&lt;td>Z&lt;/td>
+&lt;td>{q0, q1, q2, q3}&lt;/td>
+&lt;td>Eine Liste aller Zustände des Automaten (muss den Anfangszustand enthalten)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Eingabealphabet&lt;/td>
+&lt;td>A&lt;/td>
+&lt;td>{0,1}&lt;/td>
+&lt;td>Alle Zeichen die der Automat später verarbeiten können soll&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Übergangsfunktion&lt;/td>
+&lt;td>d&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Graph oder Übergangstabelle&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Anfangszustand&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>q0&lt;/td>
+&lt;td>Der Zustand bei dem die Eingabe beginnen soll&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Menge der Endzustände&lt;/td>
+&lt;td>E&lt;/td>
+&lt;td>{q2, q3}&lt;/td>
+&lt;td>Eine Liste aller Zustände die später als akzeptierend gelten sollen&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Um &lt;code>d&lt;/code> tabellarisch darzustellen, muss jeder Übergang in eine Tabelle mit folgenden Spalten eingetragen werden:&lt;/p>
+&lt;ul>
+&lt;li>aktueller Zustand&lt;/li>
+&lt;li>gelesenes Eingabesymbol&lt;/li>
+&lt;li>Folgezustand&lt;/li>
+&lt;/ul>
+&lt;h2 id="nea">NEA&lt;/h2>
+&lt;ul>
+&lt;li>Pro Wort kann es mehrere Wege durch den Automaten geben&lt;/li>
+&lt;li>Wird genau wie ein DEA aufgeschrieben&lt;/li>
+&lt;li>&lt;code>ε&lt;/code> ist als Vokabel erlaubt
+&lt;ul>
+&lt;li>So kann ohne ein Zeichen des Eingabewortes abzuarbeiten der Zustand gewechselt werden&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Jeder NEA kann theoretisch in einen DEA umgewandelt werden, das funktioniert mithilfe der Potenzmengen-Konstruktion&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="nka-nichtdeteministischer-kellerautomat">NKA (Nichtdeteministischer Kellerautomat)&lt;/h2>
+&lt;p>Ein Kellerautomat ist wie ein normaler NEA, nur das nun auch noch ein Stack verwendet werden kann. D.h. das nun für jeden Übergang nicht nur das nächste Zeichen des Eingabewortes wichtig ist, sondern auch das oberste Zeichen im Stack.&lt;/p>
+&lt;h3 id="darstellung-1">Darstellung&lt;/h3>
+&lt;h4 id="automat">Automat&lt;/h4>
+&lt;p>Anstelle eines 5-Tupels wird hier ein 7-Tupel verwendet um den Graphen darzustellen&lt;/p>
+&lt;blockquote>
+&lt;p>M = (Z, A, K, d, q0, #, E)&lt;/p>
+&lt;/blockquote>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Bezeichnung&lt;/th>
+&lt;th>Zeichen&lt;/th>
+&lt;th>Beispiel&lt;/th>
+&lt;th>Beschreibung&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Zustandsmenge&lt;/td>
+&lt;td>Z&lt;/td>
+&lt;td>{q0, q1, q2, q3}&lt;/td>
+&lt;td>siehe DEA&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Eingabealphabet&lt;/td>
+&lt;td>A&lt;/td>
+&lt;td>{0,1}&lt;/td>
+&lt;td>siehe DEA&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Kelleralphabet&lt;/td>
+&lt;td>K&lt;/td>
+&lt;td>{K, #}&lt;/td>
+&lt;td>Menge aller Zeichen die im Keller sein können. Das Kellerstartsymbol ist Teil des Kelleralphabets, aber &lt;code>ε&lt;/code> kann nicht Teil werden&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Übergangsfunktion&lt;/td>
+&lt;td>d&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>siehe DEA&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Anfangszustand&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>q0&lt;/td>
+&lt;td>siehe DEA&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Kellerstartsymbol&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>#&lt;/td>
+&lt;td>beim Instanziieren ist nur dieses Zeichen im Keller&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Menge der Endzustände&lt;/td>
+&lt;td>E&lt;/td>
+&lt;td>{q2, q3}&lt;/td>
+&lt;td>siehe DEA&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Um &lt;code>d&lt;/code> tabellarisch darzustellen, muss jeder Übergang in eine Tabelle mit folgenden Spalten eingetragen werden:&lt;/p>
+&lt;ul>
+&lt;li>aktueller Zustand&lt;/li>
+&lt;li>gelesenes Eingabesymbol&lt;/li>
+&lt;li>oberstes Kellersymbol&lt;/li>
+&lt;li>Folgezustand&lt;/li>
+&lt;li>zu schreibende Kellersymbole&lt;/li>
+&lt;/ul>
+&lt;h4 id="übergänge">Übergänge&lt;/h4>
+&lt;p>Übergänge müssen nun als Tripel angegeben werden, da es nun 3 statt 2 Variablen gibt.&lt;/p>
+&lt;blockquote>
+&lt;p>(X, p): YZ&lt;/p>
+&lt;/blockquote>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Bezeichnung&lt;/th>
+&lt;th>Beispiel&lt;/th>
+&lt;th>Beschreibung&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Oberstes Kellersymbol&lt;/td>
+&lt;td>X&lt;/td>
+&lt;td>Wird gelesen und entfernt&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Eingabesymbol&lt;/td>
+&lt;td>p&lt;/td>
+&lt;td>Dieser wert ist schon vom DEA/NEA bekannt; er gibt das nächste Zeichen des Eingabewortes an&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Zu schreibende Kellersymbole&lt;/td>
+&lt;td>ε oder XY&lt;/td>
+&lt;td>Angabe was auf den Stack gepusht wird. falls nichts gepushed werden soll wird hier &lt;code>ε&lt;/code> angegeben&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="implementation">Implementation&lt;/h1>
+&lt;h2 id="parser">Parser&lt;/h2>
+&lt;ul>
+&lt;li>Implementation eines Automaten&lt;/li>
+&lt;li>Zeichen des Eingabe Wortes werden nach einander gelesen
+&lt;ul>
+&lt;li>Die dauer zwischen den lesevorgängen ist egal, der Nuter kann z.B. auch die erste Hälfte des Wortes eingeben, sich einen Kaffe holen und dann erst den Rest eingeben&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Zustand des Automaten zu jedem Zeitpunkt abfragbar (Nicht akzeptierend / Aktzeptierend)&lt;/li>
+&lt;/ul>
+&lt;h3 id="beispiel-implementation">Beispiel Implementation:&lt;/h3>
+&lt;p>Dieser Parser simmuliert einen Automaten der die Lachsprache erkennt, d.h. alle Worte starten mit einem &lt;code>h&lt;/code>, worauf sich &lt;code>h&lt;/code>s und &lt;code>a&lt;/code>s abwechseln, bis nach dem letzen &lt;code>a&lt;/code> ein &lt;code>!&lt;/code> kommt.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Java" data-lang="Java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String&lt;span style="color:#f92672">[]&lt;/span> args&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">char&lt;/span> eingabe &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#39; &amp;#39;&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span>&lt;span style="color:#f92672">[]&lt;/span> K &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#f92672">{&lt;/span>1&lt;span style="color:#f92672">,&lt;/span>2&lt;span style="color:#f92672">,&lt;/span>4&lt;span style="color:#f92672">,&lt;/span>4&lt;span style="color:#f92672">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span> start &lt;span style="color:#f92672">=&lt;/span> 1&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span>&lt;span style="color:#f92672">[]&lt;/span> endZustaende &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#f92672">{&lt;/span>4&lt;span style="color:#f92672">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String alphabet &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;ha!&amp;#34;&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span> zustand &lt;span style="color:#f92672">=&lt;/span> start&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">do&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Aktueller Zustand: &amp;#34;&lt;/span> &lt;span style="color:#f92672">+&lt;/span> zustand&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Scanner reader &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Scanner&lt;span style="color:#f92672">(&lt;/span>System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">in&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> eingabe &lt;span style="color:#f92672">=&lt;/span> reader&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">next&lt;/span>&lt;span style="color:#f92672">().&lt;/span>&lt;span style="color:#a6e22e">charAt&lt;/span>&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>eingabe&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;h&amp;#39;&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>zustand&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> 1 &lt;span style="color:#f92672">-&amp;gt;&lt;/span> zustand &lt;span style="color:#f92672">=&lt;/span> 2&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> 3 &lt;span style="color:#f92672">-&amp;gt;&lt;/span> zustand &lt;span style="color:#f92672">=&lt;/span> 2&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Nicht Valide&amp;#34;&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">break&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;a&amp;#39;&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>zustand&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> 2 &lt;span style="color:#f92672">-&amp;gt;&lt;/span> zustand &lt;span style="color:#f92672">=&lt;/span> 3&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Nicht Valide&amp;#34;&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">break&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;!&amp;#39;&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>zustand&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> 3 &lt;span style="color:#f92672">-&amp;gt;&lt;/span> zustand &lt;span style="color:#f92672">=&lt;/span> 4&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Nicht Valide&amp;#34;&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">break&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span> &lt;span style="color:#66d9ef">while&lt;/span> &lt;span style="color:#f92672">(&lt;/span>alphabet&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">contains&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">valueOf&lt;/span>&lt;span style="color:#f92672">(&lt;/span>eingabe&lt;span style="color:#f92672">)));&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="interpreter">Interpreter&lt;/h2>
+&lt;ul>
+&lt;li>Implementation einer Grammatik&lt;/li>
+&lt;li>Das Eingabe Wort wird als ganzes gelesen und dann via Methoden aufrufen geprüft&lt;/li>
+&lt;li>Sofortige antwort
+&lt;ul>
+&lt;li>normalerweise boolscher Wert&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="beispiel-implementation-1">Beispiel Implementation:&lt;/h3>
+&lt;p>Dieser Interpreter erkennt die Schafsprache; Hier beginnt jedes Wort mit einem &lt;code>M&lt;/code>, gefolgt von einer undefinierten Anzahl an &lt;code>ä&lt;/code>s, gefolgt von einer undefinierten Anzahl an &lt;code>h&lt;/code>s, gefolgt von einem &lt;code>!&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Java" data-lang="Java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String&lt;span style="color:#f92672">[]&lt;/span> args&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">while&lt;/span> &lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">true&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Scanner reader &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Scanner&lt;span style="color:#f92672">(&lt;/span>System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">in&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>checkS&lt;span style="color:#f92672">(&lt;/span>reader&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">next&lt;/span>&lt;span style="color:#f92672">()));&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">private&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">boolean&lt;/span> &lt;span style="color:#a6e22e">checkS&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String e&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">length&lt;/span>&lt;span style="color:#f92672">()&amp;gt;&lt;/span>0&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String rest &lt;span style="color:#f92672">=&lt;/span> e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">substring&lt;/span>&lt;span style="color:#f92672">(&lt;/span>1&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">charAt&lt;/span>&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">))&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;M&amp;#39;&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> checkZ1&lt;span style="color:#f92672">(&lt;/span>rest&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">private&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">boolean&lt;/span> &lt;span style="color:#a6e22e">checkZ1&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String e&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">length&lt;/span>&lt;span style="color:#f92672">()&amp;gt;&lt;/span>0&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String rest &lt;span style="color:#f92672">=&lt;/span> e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">substring&lt;/span>&lt;span style="color:#f92672">(&lt;/span>1&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">charAt&lt;/span>&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">))&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;ä&amp;#39;&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> checkZ2&lt;span style="color:#f92672">(&lt;/span>rest&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">private&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">boolean&lt;/span> &lt;span style="color:#a6e22e">checkZ2&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String e&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">length&lt;/span>&lt;span style="color:#f92672">()&amp;gt;&lt;/span>0&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String rest &lt;span style="color:#f92672">=&lt;/span> e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">substring&lt;/span>&lt;span style="color:#f92672">(&lt;/span>1&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">charAt&lt;/span>&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">))&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;ä&amp;#39;&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> checkZ2&lt;span style="color:#f92672">(&lt;/span>rest&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;h&amp;#39;&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> checkZ3&lt;span style="color:#f92672">(&lt;/span>rest&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">private&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">boolean&lt;/span> &lt;span style="color:#a6e22e">checkZ3&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String e&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">length&lt;/span>&lt;span style="color:#f92672">()&amp;gt;&lt;/span>0&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String rest &lt;span style="color:#f92672">=&lt;/span> e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">substring&lt;/span>&lt;span style="color:#f92672">(&lt;/span>1&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">charAt&lt;/span>&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">))&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;h&amp;#39;&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> checkZ3&lt;span style="color:#f92672">(&lt;/span>rest&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;!&amp;#39;&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">length&lt;/span>&lt;span style="color:#f92672">()&lt;/span> &lt;span style="color:#f92672">==&lt;/span> 1&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="möglichkeiten-und-grenzen-von-automaten-und-formalen-sprachen">Möglichkeiten und Grenzen von Automaten und formalen Sprachen&lt;/h1>
+&lt;p>Kommt noch&lt;/p></content></item></channel></rss>

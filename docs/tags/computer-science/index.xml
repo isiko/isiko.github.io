@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>computer-science on isiko404's Homepage</title><link>https://isiko.github.io/tags/computer-science/</link><description>Recent content in computer-science on isiko404's Homepage</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 07 Mar 2022 00:00:00 +0100</lastBuildDate><atom:link href="https://isiko.github.io/tags/computer-science/index.xml" rel="self" type="application/rss+xml"/><item><title>Automatentheorie</title><link>https://isiko.github.io/projects/abitur/computer-science/automatentheorie/</link><pubDate>Mon, 07 Mar 2022 00:00:00 +0100</pubDate><guid>https://isiko.github.io/projects/abitur/computer-science/automatentheorie/</guid><description>Formale Sprachen und Grammatiken A sei ein Alphabet. Eine endlich Folge von Zeichen ∈ A heißt Wort. Das leere Wort ε besteht aus null Zeichen. A* ist die Menge aller endlich langer Wörter über A. Jede Teilmenge L von A*heißt formale Sprache über dem Alphabet A.
+Schriftlich sähe das dann so aus:
+A = {0|1} x = 01101
+Grammatiken Grammatika sind Regeln nach denen Wörter Produziert werden können. Sie werden als 4-Tupel angegeben:</description><content>&lt;h1 id="formale-sprachen-und-grammatiken">Formale Sprachen und Grammatiken&lt;/h1>
+&lt;p>&lt;code>A&lt;/code> sei ein Alphabet. Eine endlich Folge von Zeichen ∈ A heißt &lt;code>Wort&lt;/code>. Das &lt;code>leere Wort&lt;/code> &lt;code>ε&lt;/code> besteht aus null Zeichen. &lt;code>A*&lt;/code> ist die Menge aller &lt;em>endlich&lt;/em> langer Wörter über A. Jede Teilmenge &lt;code>L&lt;/code> von &lt;code>A*&lt;/code>heißt &lt;code>formale Sprache&lt;/code> über dem Alphabet &lt;code>A&lt;/code>.&lt;/p>
+&lt;p>Schriftlich sähe das dann so aus:&lt;/p>
+&lt;blockquote>
+&lt;p>A = {0|1} x = 01101&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="grammatiken">Grammatiken&lt;/h2>
+&lt;p>Grammatika sind Regeln nach denen Wörter Produziert werden können. Sie werden als 4-Tupel angegeben:&lt;/p>
+&lt;blockquote>
+&lt;p>G = (Vt, Vn, S, P)&lt;/p>
+&lt;/blockquote>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Bezeichnung&lt;/th>
+&lt;th>Zeichen&lt;/th>
+&lt;th>Beispiel&lt;/th>
+&lt;th>Beschreibung&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Terminalsymbole&lt;/td>
+&lt;td>Vt&lt;/td>
+&lt;td>{m, ä, h, !}&lt;/td>
+&lt;td>Das Alphabet aus dem später die Wörter gebildet werden. Terminale sind meist Kleinbuchstaben&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Non-Terminalsymbole&lt;/td>
+&lt;td>Vn&lt;/td>
+&lt;td>{S, A, B}&lt;/td>
+&lt;td>Vergleichbar mit den Zuständen er Automaten. Nonterminale sind meist Großbuchstaben&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Startsymbol&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>S&lt;/td>
+&lt;td>Vergleichbar mit dem Startzustand der Automaten&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Produktionsregeln&lt;/td>
+&lt;td>P&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Ähnlich zu &lt;code>d&lt;/code> bei den Automaten. Jedem Non-Terminalsymbol wird hier eine Kombination aus Terminal und Non-Terminalsymbolen zugewiesen, wobei weder noch zwingen notwendig sind&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>P kann wie folgt aufgeschrieben werden:&lt;/p>
+&lt;blockquote>
+&lt;p>S -&amp;gt; mAB!
+A -&amp;gt; ä | äA
+B -&amp;gt; h | hB&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="chomsky-hierarchie">Chomsky-Hierarchie&lt;/h2>
+&lt;p>Chomsky und Schützenberg definierten eine Hierachie der Formalen Sprachen. Es gibt 4 Stufen, wobei die unterste (Typ 0) jegliche Sprachen umfasst. Jede sprache des Typs n ist auch teil des Typs n-1. Je höher der Typ, dessdo einfacher zu erkennen sind die Sprachen&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Typ&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>Beschreibung&lt;/th>
+&lt;th>Benötigte Technik&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>0&lt;/td>
+&lt;td>allgemeine Chomsky Grammatik&lt;/td>
+&lt;td>alle Formalen Grammatiken&lt;/td>
+&lt;td>Turing Maschiene&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>kontextsensitive Grammatik&lt;/td>
+&lt;td>Nonterminale müssen durch zeichen ersetztwerden. Nur das leere Wort ist zugelassen&lt;/td>
+&lt;td>Turing Maschiene&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>kontextfreie Grammatik&lt;/td>
+&lt;td>Jede Produktionsregel hat als Input nur genau ein Nonterminal&lt;/td>
+&lt;td>Kellerautomat&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>Reguläre Grammatiken&lt;/td>
+&lt;td>Jede Produktionsregel muss als output nur genau 1 Terminal haben, und nur wenn das Terminal nicht &lt;code>ε&lt;/code> ist darf auch ein Nonterminal dabei sein.&lt;/td>
+&lt;td>DEA / NEA&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="reguläre-sprachen">Reguläre Sprachen&lt;/h3>
+&lt;p>Reguläre Sprachen können entweder &lt;code>linkslinear&lt;/code> oder &lt;code>rechtslinear&lt;/code> sein. &lt;code>Rechtslineare&lt;/code> Sprachen werden auch als &lt;code>reguläre&lt;/code> Sprachen bezeichnet&lt;/p>
+&lt;h1 id="automaten">Automaten&lt;/h1>
+&lt;ul>
+&lt;li>Erhält Wort als Eingabe und gibt zurück ob er das Wort Akzeptiert oder nicht
+&lt;ul>
+&lt;li>-&amp;gt; auch &lt;code>Akzeptor&lt;/code> genannt&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Menge der vom Automaten akzeptierten Wörter -&amp;gt; vom Automaten Definierte Sprache
+&lt;ul>
+&lt;li>Durch endliche Automaten erkannte Sprachen sind Regulär (Also Typ-3)&lt;/li>
+&lt;li>Durch Kellerautomaten erkannte Sprachen sind Kontext-Frei (Also Typ-2)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Besteht aus mehereren Zuständen und übergängen zwischen de
+&lt;ul>
+&lt;li>Vergleichbar mit &lt;code>Non-Terminalen&lt;/code> und &lt;code>Produktionsregeln&lt;/code> der Grammatiken&lt;/li>
+&lt;li>Können als Graph oder Tabelle verschriftlicht werden&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="dea-determinitstischer-endlicher-automat">DEA (Determinitstischer Endlicher Automat)&lt;/h2>
+&lt;ul>
+&lt;li>Pro Wort gibt es nur einen Weg der durch den Automaten genommen werden kann&lt;/li>
+&lt;li>Wird als 5-Tupel geschrieben&lt;/li>
+&lt;li>&lt;code>ε&lt;/code> ist als Vokabel NICHT erlaubt&lt;/li>
+&lt;/ul>
+&lt;h3 id="darstellung">Darstellung&lt;/h3>
+&lt;blockquote>
+&lt;p>M = (Z, A, d, q0, E)&lt;/p>
+&lt;/blockquote>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Bezeichnung&lt;/th>
+&lt;th>Zeichen&lt;/th>
+&lt;th>Beispiel&lt;/th>
+&lt;th>Beschreibung&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Zustandsmenge&lt;/td>
+&lt;td>Z&lt;/td>
+&lt;td>{q0, q1, q2, q3}&lt;/td>
+&lt;td>Eine Liste aller Zustände des Automaten (muss den Anfangszustand enthalten)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Eingabealphabet&lt;/td>
+&lt;td>A&lt;/td>
+&lt;td>{0,1}&lt;/td>
+&lt;td>Alle Zeichen die der Automat später verarbeiten können soll&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Übergangsfunktion&lt;/td>
+&lt;td>d&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Graph oder Übergangstabelle&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Anfangszustand&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>q0&lt;/td>
+&lt;td>Der Zustand bei dem die Eingabe beginnen soll&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Menge der Endzustände&lt;/td>
+&lt;td>E&lt;/td>
+&lt;td>{q2, q3}&lt;/td>
+&lt;td>Eine Liste aller Zustände die später als akzeptierend gelten sollen&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Um &lt;code>d&lt;/code> tabellarisch darzustellen, muss jeder Übergang in eine Tabelle mit folgenden Spalten eingetragen werden:&lt;/p>
+&lt;ul>
+&lt;li>aktueller Zustand&lt;/li>
+&lt;li>gelesenes Eingabesymbol&lt;/li>
+&lt;li>Folgezustand&lt;/li>
+&lt;/ul>
+&lt;h2 id="nea">NEA&lt;/h2>
+&lt;ul>
+&lt;li>Pro Wort kann es mehrere Wege durch den Automaten geben&lt;/li>
+&lt;li>Wird genau wie ein DEA aufgeschrieben&lt;/li>
+&lt;li>&lt;code>ε&lt;/code> ist als Vokabel erlaubt
+&lt;ul>
+&lt;li>So kann ohne ein Zeichen des Eingabewortes abzuarbeiten der Zustand gewechselt werden&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Jeder NEA kann theoretisch in einen DEA umgewandelt werden, das funktioniert mithilfe der Potenzmengen-Konstruktion&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="nka-nichtdeteministischer-kellerautomat">NKA (Nichtdeteministischer Kellerautomat)&lt;/h2>
+&lt;p>Ein Kellerautomat ist wie ein normaler NEA, nur das nun auch noch ein Stack verwendet werden kann. D.h. das nun für jeden Übergang nicht nur das nächste Zeichen des Eingabewortes wichtig ist, sondern auch das oberste Zeichen im Stack.&lt;/p>
+&lt;h3 id="darstellung-1">Darstellung&lt;/h3>
+&lt;h4 id="automat">Automat&lt;/h4>
+&lt;p>Anstelle eines 5-Tupels wird hier ein 7-Tupel verwendet um den Graphen darzustellen&lt;/p>
+&lt;blockquote>
+&lt;p>M = (Z, A, K, d, q0, #, E)&lt;/p>
+&lt;/blockquote>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Bezeichnung&lt;/th>
+&lt;th>Zeichen&lt;/th>
+&lt;th>Beispiel&lt;/th>
+&lt;th>Beschreibung&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Zustandsmenge&lt;/td>
+&lt;td>Z&lt;/td>
+&lt;td>{q0, q1, q2, q3}&lt;/td>
+&lt;td>siehe DEA&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Eingabealphabet&lt;/td>
+&lt;td>A&lt;/td>
+&lt;td>{0,1}&lt;/td>
+&lt;td>siehe DEA&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Kelleralphabet&lt;/td>
+&lt;td>K&lt;/td>
+&lt;td>{K, #}&lt;/td>
+&lt;td>Menge aller Zeichen die im Keller sein können. Das Kellerstartsymbol ist Teil des Kelleralphabets, aber &lt;code>ε&lt;/code> kann nicht Teil werden&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Übergangsfunktion&lt;/td>
+&lt;td>d&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>siehe DEA&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Anfangszustand&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>q0&lt;/td>
+&lt;td>siehe DEA&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Kellerstartsymbol&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>#&lt;/td>
+&lt;td>beim Instanziieren ist nur dieses Zeichen im Keller&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Menge der Endzustände&lt;/td>
+&lt;td>E&lt;/td>
+&lt;td>{q2, q3}&lt;/td>
+&lt;td>siehe DEA&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Um &lt;code>d&lt;/code> tabellarisch darzustellen, muss jeder Übergang in eine Tabelle mit folgenden Spalten eingetragen werden:&lt;/p>
+&lt;ul>
+&lt;li>aktueller Zustand&lt;/li>
+&lt;li>gelesenes Eingabesymbol&lt;/li>
+&lt;li>oberstes Kellersymbol&lt;/li>
+&lt;li>Folgezustand&lt;/li>
+&lt;li>zu schreibende Kellersymbole&lt;/li>
+&lt;/ul>
+&lt;h4 id="übergänge">Übergänge&lt;/h4>
+&lt;p>Übergänge müssen nun als Tripel angegeben werden, da es nun 3 statt 2 Variablen gibt.&lt;/p>
+&lt;blockquote>
+&lt;p>(X, p): YZ&lt;/p>
+&lt;/blockquote>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Bezeichnung&lt;/th>
+&lt;th>Beispiel&lt;/th>
+&lt;th>Beschreibung&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Oberstes Kellersymbol&lt;/td>
+&lt;td>X&lt;/td>
+&lt;td>Wird gelesen und entfernt&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Eingabesymbol&lt;/td>
+&lt;td>p&lt;/td>
+&lt;td>Dieser wert ist schon vom DEA/NEA bekannt; er gibt das nächste Zeichen des Eingabewortes an&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Zu schreibende Kellersymbole&lt;/td>
+&lt;td>ε oder XY&lt;/td>
+&lt;td>Angabe was auf den Stack gepusht wird. falls nichts gepushed werden soll wird hier &lt;code>ε&lt;/code> angegeben&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="implementation">Implementation&lt;/h1>
+&lt;h2 id="parser">Parser&lt;/h2>
+&lt;ul>
+&lt;li>Implementation eines Automaten&lt;/li>
+&lt;li>Zeichen des Eingabe Wortes werden nach einander gelesen
+&lt;ul>
+&lt;li>Die dauer zwischen den lesevorgängen ist egal, der Nuter kann z.B. auch die erste Hälfte des Wortes eingeben, sich einen Kaffe holen und dann erst den Rest eingeben&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Zustand des Automaten zu jedem Zeitpunkt abfragbar (Nicht akzeptierend / Aktzeptierend)&lt;/li>
+&lt;/ul>
+&lt;h3 id="beispiel-implementation">Beispiel Implementation:&lt;/h3>
+&lt;p>Dieser Parser simmuliert einen Automaten der die Lachsprache erkennt, d.h. alle Worte starten mit einem &lt;code>h&lt;/code>, worauf sich &lt;code>h&lt;/code>s und &lt;code>a&lt;/code>s abwechseln, bis nach dem letzen &lt;code>a&lt;/code> ein &lt;code>!&lt;/code> kommt.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Java" data-lang="Java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String&lt;span style="color:#f92672">[]&lt;/span> args&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">char&lt;/span> eingabe &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#39; &amp;#39;&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span>&lt;span style="color:#f92672">[]&lt;/span> K &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#f92672">{&lt;/span>1&lt;span style="color:#f92672">,&lt;/span>2&lt;span style="color:#f92672">,&lt;/span>4&lt;span style="color:#f92672">,&lt;/span>4&lt;span style="color:#f92672">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span> start &lt;span style="color:#f92672">=&lt;/span> 1&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span>&lt;span style="color:#f92672">[]&lt;/span> endZustaende &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#f92672">{&lt;/span>4&lt;span style="color:#f92672">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String alphabet &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;ha!&amp;#34;&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">int&lt;/span> zustand &lt;span style="color:#f92672">=&lt;/span> start&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">do&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Aktueller Zustand: &amp;#34;&lt;/span> &lt;span style="color:#f92672">+&lt;/span> zustand&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Scanner reader &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Scanner&lt;span style="color:#f92672">(&lt;/span>System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">in&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> eingabe &lt;span style="color:#f92672">=&lt;/span> reader&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">next&lt;/span>&lt;span style="color:#f92672">().&lt;/span>&lt;span style="color:#a6e22e">charAt&lt;/span>&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>eingabe&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;h&amp;#39;&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>zustand&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> 1 &lt;span style="color:#f92672">-&amp;gt;&lt;/span> zustand &lt;span style="color:#f92672">=&lt;/span> 2&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> 3 &lt;span style="color:#f92672">-&amp;gt;&lt;/span> zustand &lt;span style="color:#f92672">=&lt;/span> 2&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Nicht Valide&amp;#34;&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">break&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;a&amp;#39;&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>zustand&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> 2 &lt;span style="color:#f92672">-&amp;gt;&lt;/span> zustand &lt;span style="color:#f92672">=&lt;/span> 3&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Nicht Valide&amp;#34;&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">break&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;!&amp;#39;&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>zustand&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> 3 &lt;span style="color:#f92672">-&amp;gt;&lt;/span> zustand &lt;span style="color:#f92672">=&lt;/span> 4&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Nicht Valide&amp;#34;&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">break&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span> &lt;span style="color:#66d9ef">while&lt;/span> &lt;span style="color:#f92672">(&lt;/span>alphabet&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">contains&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">valueOf&lt;/span>&lt;span style="color:#f92672">(&lt;/span>eingabe&lt;span style="color:#f92672">)));&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="interpreter">Interpreter&lt;/h2>
+&lt;ul>
+&lt;li>Implementation einer Grammatik&lt;/li>
+&lt;li>Das Eingabe Wort wird als ganzes gelesen und dann via Methoden aufrufen geprüft&lt;/li>
+&lt;li>Sofortige antwort
+&lt;ul>
+&lt;li>normalerweise boolscher Wert&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="beispiel-implementation-1">Beispiel Implementation:&lt;/h3>
+&lt;p>Dieser Interpreter erkennt die Schafsprache; Hier beginnt jedes Wort mit einem &lt;code>M&lt;/code>, gefolgt von einer undefinierten Anzahl an &lt;code>ä&lt;/code>s, gefolgt von einer undefinierten Anzahl an &lt;code>h&lt;/code>s, gefolgt von einem &lt;code>!&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-Java" data-lang="Java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String&lt;span style="color:#f92672">[]&lt;/span> args&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">while&lt;/span> &lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#66d9ef">true&lt;/span>&lt;span style="color:#f92672">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Scanner reader &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> Scanner&lt;span style="color:#f92672">(&lt;/span>System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">in&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>checkS&lt;span style="color:#f92672">(&lt;/span>reader&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">next&lt;/span>&lt;span style="color:#f92672">()));&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">private&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">boolean&lt;/span> &lt;span style="color:#a6e22e">checkS&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String e&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">length&lt;/span>&lt;span style="color:#f92672">()&amp;gt;&lt;/span>0&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String rest &lt;span style="color:#f92672">=&lt;/span> e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">substring&lt;/span>&lt;span style="color:#f92672">(&lt;/span>1&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">charAt&lt;/span>&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">))&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;M&amp;#39;&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> checkZ1&lt;span style="color:#f92672">(&lt;/span>rest&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">private&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">boolean&lt;/span> &lt;span style="color:#a6e22e">checkZ1&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String e&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">length&lt;/span>&lt;span style="color:#f92672">()&amp;gt;&lt;/span>0&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String rest &lt;span style="color:#f92672">=&lt;/span> e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">substring&lt;/span>&lt;span style="color:#f92672">(&lt;/span>1&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">charAt&lt;/span>&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">))&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;ä&amp;#39;&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> checkZ2&lt;span style="color:#f92672">(&lt;/span>rest&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">private&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">boolean&lt;/span> &lt;span style="color:#a6e22e">checkZ2&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String e&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">length&lt;/span>&lt;span style="color:#f92672">()&amp;gt;&lt;/span>0&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String rest &lt;span style="color:#f92672">=&lt;/span> e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">substring&lt;/span>&lt;span style="color:#f92672">(&lt;/span>1&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">charAt&lt;/span>&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">))&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;ä&amp;#39;&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> checkZ2&lt;span style="color:#f92672">(&lt;/span>rest&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;h&amp;#39;&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> checkZ3&lt;span style="color:#f92672">(&lt;/span>rest&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">private&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">boolean&lt;/span> &lt;span style="color:#a6e22e">checkZ3&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String e&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">length&lt;/span>&lt;span style="color:#f92672">()&amp;gt;&lt;/span>0&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String rest &lt;span style="color:#f92672">=&lt;/span> e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">substring&lt;/span>&lt;span style="color:#f92672">(&lt;/span>1&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#f92672">(&lt;/span>e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">charAt&lt;/span>&lt;span style="color:#f92672">(&lt;/span>0&lt;span style="color:#f92672">))&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;h&amp;#39;&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> checkZ3&lt;span style="color:#f92672">(&lt;/span>rest&lt;span style="color:#f92672">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#39;!&amp;#39;&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> e&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">length&lt;/span>&lt;span style="color:#f92672">()&lt;/span> &lt;span style="color:#f92672">==&lt;/span> 1&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> &lt;span style="color:#f92672">-&amp;gt;&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#66d9ef">false&lt;/span>&lt;span style="color:#f92672">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="möglichkeiten-und-grenzen-von-automaten-und-formalen-sprachen">Möglichkeiten und Grenzen von Automaten und formalen Sprachen&lt;/h1>
+&lt;p>Kommt noch&lt;/p></content></item><item><title>Daten und ihre Strukturierung</title><link>https://isiko.github.io/projects/abitur/computer-science/datenundstrukturen/</link><pubDate>Mon, 07 Mar 2022 00:00:00 +0100</pubDate><guid>https://isiko.github.io/projects/abitur/computer-science/datenundstrukturen/</guid><description>Objekte und Klassen Diagramme Um beim schreiben von Software eine grobe Idee zu haben was man eigendlich Machen muss ist es Sinnvoll eine grobe Idee zu haben was man macht. Dazu hat die Informatik sich einige Diagramme überlegt, und das Abitur in NRW hat sogar noch eins mehr! Im folgenden möchte ich einen Überblick über die verschiedenen Diagramme geben, wobei ich sie in der Reihenfolge vorstelle in der sie normalerweise erstellt werden.</description><content>&lt;h1 id="objekte-und-klassen">Objekte und Klassen&lt;/h1>
+&lt;h2 id="diagramme">Diagramme&lt;/h2>
+&lt;p>Um beim schreiben von Software eine grobe Idee zu haben was man eigendlich Machen muss ist es Sinnvoll eine grobe Idee zu haben was man macht. Dazu hat die Informatik sich einige Diagramme überlegt, und das Abitur in NRW hat sogar noch eins mehr! Im folgenden möchte ich einen Überblick über die verschiedenen Diagramme geben, wobei ich sie in der Reihenfolge vorstelle in der sie normalerweise erstellt werden.&lt;/p>
+&lt;h3 id="objektdiagramm">Objektdiagramm&lt;/h3>
+&lt;ul>
+&lt;li>Beschreibt einen Zustand des Programms
+&lt;ul>
+&lt;li>Konkrete Werte für Attribute&lt;/li>
+&lt;li>keine Methoden&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Alle Objekte mit Runden Ecken&lt;/li>
+&lt;li>Pfeile für Interaktionen zwischen den Objekten&lt;/li>
+&lt;/ul>
+&lt;h3 id="klassendiagramme">Klassendiagramme&lt;/h3>
+&lt;p>Alle Objekte müssen einer Klasse zugehören, wesshalb auch hierfür Diagramme notwendig sind.&lt;/p>
+&lt;h4 id="klassentypen">Klassentypen&lt;/h4>
+&lt;p>Klasse ist nicht unbedingt gleich Klasse, es gibt 2 wichtige Merkmale die sie aufweisen können:&lt;/p>
+&lt;ul>
+&lt;li>Interfaces
+&lt;ul>
+&lt;li>Interfaces haben keine Attribute&lt;/li>
+&lt;li>Methoden sind nur mit Methodenkopf angegeben&lt;/li>
+&lt;li>Es kann nicht dierekt ein Objekt von ihnen erstellt werden, nur ihre Unterklassen können instanziiert werden&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="beziehungen">Beziehungen&lt;/h4>
+&lt;p>Klassen stehen meist in Beziehungen mit anderen Klassen, gekennzeichnet durch verschiedene Arten von Pfeilen. Im folgenden werde ich versuchen alle zu erklären, wobei ich immer von &lt;code>A -&amp;gt; B&lt;/code> ausgehen werde&lt;/p>
+&lt;ul>
+&lt;li>Assoziation
+&lt;ul>
+&lt;li>Bedeutung: Objekte der Klasse &lt;code>A&lt;/code> können auch eine bestimmte anzahl an Objekten der Klasse &lt;code>B&lt;/code> zugreifen&lt;/li>
+&lt;li>gekennzeichnet durch einen einfachen Pfeil&lt;/li>
+&lt;li>Kardinalität
+&lt;ul>
+&lt;li>Indikator der Anzahl an Objekten der Klasse &lt;code>B&lt;/code> die von einem Objekt der Klasse &lt;code>A&lt;/code> zugegriffen werden kann. (meist entweder 0 oder 0..n)&lt;/li>
+&lt;li>Steht bei der Pfeilspitze&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Haben einen Namen&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Vererbung
+&lt;ul>
+&lt;li>Bedeutung: Jeglicher Code der Klasse &lt;code>B&lt;/code> wird auch der Klasse &lt;code>A&lt;/code> zur verfügung gestellt&lt;/li>
+&lt;li>Dargestellt duch einen Pfeil mit einem nicht ausgefüllten Dreieck als Spitze
+&lt;ul>
+&lt;li>Beim erben von einem Interface wird der Pfeil gestrichelt gezeichnet&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Wichtig: Pfeil geht von der Unteklasse zur Superklasse&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="entwurfsdiagramm">Entwurfsdiagramm&lt;/h3>
+&lt;ul>
+&lt;li>Beschreibt alle Klassen des späteren Programms
+&lt;ul>
+&lt;li>Inhalte für jede Klassen:
+&lt;ul>
+&lt;li>Klassenname&lt;/li>
+&lt;li>Attribute (mit Pseudodatentyp)&lt;/li>
+&lt;li>Methoden (mit Pseudodatentyp)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Selbst Bibliotheken müssen theoretisch mit aufgezeichnet werden (siehe z.B. Stack, Queue, &amp;hellip;)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Komplett unabhängig von Programm Code
+&lt;ul>
+&lt;li>Datentypen NICHT wie in Java, stattdessen andere Namen:
+&lt;ul>
+&lt;li>Integer =&amp;gt; Zahl&lt;/li>
+&lt;li>String =&amp;gt; Text&lt;/li>
+&lt;li>Boolean =&amp;gt; Wahrheitswert&lt;/li>
+&lt;li>Stack/Queue/List/&amp;hellip; =&amp;gt; Datensammlung&amp;lt;&amp;gt;
+&lt;ul>
+&lt;li>in den spitzen Klammern steht hier der Datentyp der Elemente&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="implementationsdiagramm">Implementationsdiagramm&lt;/h3>
+&lt;ul>
+&lt;li>Präzisierung der Entwurfsdiagramms&lt;/li>
+&lt;li>Näher an der verwendeten Programmiersprache&lt;/li>
+&lt;li>Verwendet echt Datentypen anstelle von Pseudodatentypen&lt;/li>
+&lt;li>Markierung von Interfaces und Abstrakten Klassen
+&lt;ul>
+&lt;li>Interfaces
+&lt;ul>
+&lt;li>Interfaces haben keine Attribute&lt;/li>
+&lt;li>Methoden sind nur mit Methodenkopf angegeben&lt;/li>
+&lt;li>Es kann nicht dierekt ein Objekt von ihnen erstellt werden, nur ihre Unterklassen können instanziiert werden&lt;/li>
+&lt;li>Im Implementationsdiagramm wird über den Klassennamen mittig &lt;code>&amp;lt;&amp;lt;inteface&amp;gt;&amp;gt;&lt;/code> geschrieben&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Abstrakte Klassen
+&lt;ul>
+&lt;li>Sind als Schablone für ander ähnliche Klassen zu verstehen
+&lt;ul>
+&lt;li>Bsp. Fahrzeug als Abstrakte Klasse und Auto oder Roller als Unterklassen&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Es kann nicht direkt ein Objekt von ihnen erstellt werden, nur ihre Unterklassen können instanziiert werden&lt;/li>
+&lt;li>Im Implementatinsdiagramm wird unter den Klassennamen rechts &lt;code>{{abstract}}&lt;/code> geschrieben&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>gängige Konzepte wie Listen, Stacks oder Queues können müssen nicht mit Attributen und Methoden aufgeschrieben werden, es reicht der Klassenname
+&lt;ul>
+&lt;li>Hier muss aber der Contenttype angegeben werden&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="struktogramme">Struktogramme&lt;/h3>
+&lt;p>Kommt noch&lt;/p>
+&lt;h2 id="lineare-strukturen">Lineare Strukturen&lt;/h2>
+&lt;p>(Dokumentation wird in der Klausur bereitgestellt)&lt;/p>
+&lt;ul>
+&lt;li>Stack&lt;/li>
+&lt;li>Queue&lt;/li>
+&lt;li>List&lt;/li>
+&lt;/ul>
+&lt;h2 id="nicht-lineare-strukturen">Nicht-Lineare Strukturen&lt;/h2>
+&lt;p>(Dokumentation wird in der Klausur bereitgestellt)&lt;/p>
+&lt;ul>
+&lt;li>Binary Tree&lt;/li>
+&lt;li>Binary Search Tree&lt;/li>
+&lt;li>Graph&lt;/li>
+&lt;/ul>
+&lt;h1 id="datenbanken">Datenbanken&lt;/h1>
+&lt;p>Datenbanken sind ein einfacher zentraler Massenspeicher der von mehreren Programmen gleichzeitig genutzt werden kann.&lt;/p>
+&lt;h2 id="modelierung">Modelierung&lt;/h2>
+&lt;p>Kommt noch&lt;/p>
+&lt;h2 id="anomalien">Anomalien&lt;/h2>
+&lt;p>Durch das verändern der Datenbank kann es sein das sie Fehlerhaft wird. Diese &lt;code>Anomalien&lt;/code> können teilweise durch kluges Modelieren vermieden werden. Gegen mutwillige zerstörung hilft das aber auch nicht.&lt;/p>
+&lt;h3 id="arten">Arten&lt;/h3>
+&lt;ul>
+&lt;li>Löschanomalien&lt;/li>
+&lt;li>Eingügeanomalien&lt;/li>
+&lt;li>Aktualisierungsanomalien&lt;/li>
+&lt;/ul>
+&lt;h3 id="normalisierung">Normalisierung&lt;/h3>
+&lt;ol>
+&lt;li>Ein Wert pro Zelle&lt;/li>
+&lt;li>Die Primärschlüssel sind Abhängig voneinander - Jedes Nicht-Schlüsselattribut ist &lt;code>voll funktional abhängig&lt;/code> von Primärschlüssel&lt;/li>
+&lt;li>Aus keinem Nicht-Schlüsselattribut folgt ein anderes Nicht-Schlüsselattribut
+&lt;ul>
+&lt;li>Jedes Nicht-Schlüsselattribut ist &lt;code>nicht transitiv&lt;/code> vom Primärschlüssel &lt;code>abhängig&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="sql">SQL&lt;/h2>
+&lt;h3 id="statements">Statements&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>SELECT&lt;/code> spalten &lt;code>AS&lt;/code> alias &lt;code>FROM&lt;/code> tabelle&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>GROUP BY&lt;/code> spalte
+&lt;ul>
+&lt;li>Zusammenfassung von Zeilen, deren Wert in der angegebenen Spalte gleich ist&lt;/li>
+&lt;li>Abgesehen von der angegebenen Spalte sollten nur Funktionen als Spalten angegeben werden&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>ORDER BY&lt;/code> spalte1, spalte2, &amp;hellip; ((&lt;code>ASC&lt;/code> / &lt;code>DESC&lt;/code>))
+&lt;ul>
+&lt;li>Zeilen werden nach ihren werten in den angegebenen Spalten sortiert&lt;/li>
+&lt;li>&lt;code>ASC&lt;/code> = Aufsteigend&lt;/li>
+&lt;li>&lt;code>DESC&lt;/code> = Abstiegend (Standard)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>((&lt;code>LEFT&lt;/code>/&lt;code>RIGHT&lt;/code>/&lt;code>INNER&lt;/code>)) &lt;code>JOIN&lt;/code> &amp;hellip; &lt;code>ON&lt;/code> tabelle1.spalte1 = tabelle2.spalte2
+&lt;ul>
+&lt;li>Kombiniert 2 tabellen und gibt die spalten zurück in denen die &lt;code>ON&lt;/code> Bedingung erfüllt ist oder die ein anderes Kriterium erfüllen&lt;/li>
+&lt;li>&lt;code>INNER&lt;/code> = Gibt nur die Spalten zurück, die die Bedingung erfüllen&lt;/li>
+&lt;li>&lt;code>LEFT (OUTER)&lt;/code> = Wie &lt;code>INNER&lt;/code>, nur das egal ob die Bedingung erfüllt ist alle Spalten der 1. genannten Tabelle ausgegeben werden&lt;/li>
+&lt;li>&lt;code>RIGHT (OUTER)&lt;/code> = Wie &lt;code>INNER&lt;/code>, nur das egal ob die Bedingung erfüllt ist alle Spalten der 2. genannten Tabelle ausgegeben werden&lt;/li>
+&lt;li>&lt;code>FULL (OUTER)&lt;/code> = Alle Spalten werden ausgegeben&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>UNION&lt;/code>
+&lt;ul>
+&lt;li>Setzt die jede n-te Spalte der 2. Tabelle unter die n-te Spalte der 1. Tabelle&lt;/li>
+&lt;li>Standardmäßig werden doppelte Zeilen rausgefiltert
+&lt;ul>
+&lt;li>kann durch &lt;code>UNION ALL&lt;/code> deaktiviert werden&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>DELETE FROM&lt;/code> tabelle &lt;code>WHERE&lt;/code> bedingung&lt;/p>
+&lt;ul>
+&lt;li>Das WHERE statement kann auch weggelassen werden, dann werden einfach alle einträge der tabelle gelöscht&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>INSERT INTO&lt;/code> tabelle (spalte1, spalte2, &amp;hellip;) &lt;code>VALUES&lt;/code> (wert1, wert2, &amp;hellip;)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>UPDATE&lt;/code> tabelle &lt;code>SET&lt;/code> spalte1 = wert1, spalte2 = wert2, &amp;hellip; &lt;code>WHERE&lt;/code> bedingung&lt;/p>
+&lt;ul>
+&lt;li>Das WHERE statement kann auch weggelassen werden, dann werden die operationen auf alle werte ausgeführt&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="besondere-vergleichsoperatoren">Besondere Vergleichsoperatoren&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Beispiel&lt;/th>
+&lt;th>Beschreibung&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>a &lt;code>&amp;lt;&amp;gt;&lt;/code> b&lt;/td>
+&lt;td>Ungleich&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>a &lt;code>LIKE&lt;/code> b&lt;/td>
+&lt;td>Pattern Matching (% = egal wie viele undefinierte chars&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>a &lt;code>BETWEEN&lt;/code> b &lt;code>AND&lt;/code> c&lt;/td>
+&lt;td>Testet ob &lt;code>a&lt;/code> in der range von &lt;code>b&lt;/code> - &lt;code>c&lt;/code> ist&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>a &lt;code>IN&lt;/code> (geschachtelte SQL abfrage)&lt;/td>
+&lt;td>Testet ob &lt;code>a&lt;/code> in den Ergebnissen der geschachtelten Abfrage ist&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>a &lt;code>IS&lt;/code> &lt;code>NULL&lt;/code>&lt;/td>
+&lt;td>Testet ob der &lt;code>a&lt;/code> nicht definiert ist&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="funktionen">Funktionen&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Funktionsname&lt;/th>
+&lt;th>Beschreibung&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>COUNT&lt;/code>&lt;/td>
+&lt;td>Gibt die Anzahl der Zeilen wieder&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>SUM&lt;/code>&lt;/td>
+&lt;td>Gibt die Summe aller werte einer Spalte wieder&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>MAX&lt;/code>&lt;/td>
+&lt;td>Gibt den Minimalwert in einer Spalte wieder&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>MIN&lt;/code>&lt;/td>
+&lt;td>Gibt den Maximalwert in einer Spalte wieder&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>AVG&lt;/code>&lt;/td>
+&lt;td>Gibt den Durchschnittswert einer Spalte wieder&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Kommt noch&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></content></item><item><title>Graphentheorie</title><link>https://isiko.github.io/projects/abitur/computer-science/graphentheorie/</link><pubDate>Mon, 07 Mar 2022 00:00:00 +0100</pubDate><guid>https://isiko.github.io/projects/abitur/computer-science/graphentheorie/</guid><description>Traversierung Geht den ganzen Graphen ab. Kann auch zur Suche eines Knotens benutzt werden. Kann Theoretisch auch als Routenplaner verwendet werden
+Breiten Traversierung Kommt noch
+Tiefen Traversierung Kommt noch
+Minimal-Spanning Tree Generiert eine Version des gegebenen Graphens, der alle Knoten umfasst, allerdings nur das absolute Minimum an Kanten enthält (nach Gewicht)
+Kruskal Kanten nach Gewicht sortieren Jede Kante Prüfen Wenn durch das einsetzen der Kante in den neuen Graphen kein Kreis entsteht: einsetzten Ansonsten Löschen Bei einem getrennten Graphen wird auch der Output getrennt sein.</description><content>&lt;h1 id="traversierung">Traversierung&lt;/h1>
+&lt;p>Geht den ganzen Graphen ab. Kann auch zur Suche eines Knotens benutzt werden. Kann Theoretisch auch als Routenplaner verwendet werden&lt;/p>
+&lt;h2 id="breiten-traversierung">Breiten Traversierung&lt;/h2>
+&lt;p>Kommt noch&lt;/p>
+&lt;h2 id="tiefen-traversierung">Tiefen Traversierung&lt;/h2>
+&lt;p>Kommt noch&lt;/p>
+&lt;h1 id="minimal-spanning-tree">Minimal-Spanning Tree&lt;/h1>
+&lt;p>Generiert eine Version des gegebenen Graphens, der alle Knoten umfasst, allerdings nur das absolute Minimum an Kanten enthält (nach Gewicht)&lt;/p>
+&lt;h2 id="kruskal">Kruskal&lt;/h2>
+&lt;ol>
+&lt;li>Kanten nach Gewicht sortieren&lt;/li>
+&lt;li>Jede Kante Prüfen
+&lt;ul>
+&lt;li>Wenn durch das einsetzen der Kante in den neuen Graphen kein Kreis entsteht: einsetzten&lt;/li>
+&lt;li>Ansonsten Löschen
+Bei einem getrennten Graphen wird auch der Output getrennt sein.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="prim">Prim&lt;/h2>
+&lt;ol>
+&lt;li>Zufällige Startposition wählen und Markieren&lt;/li>
+&lt;li>Von allen Markierten Knoten die Günstigste Verbindung zu einem Nicht Markierten Knoten suchen und einsetzen&lt;/li>
+&lt;li>Schritt 2 solange wieder holen, bis alle Knoten Markiert sind
+Bei einem Getrennten Graphen wird Prim irgendwann in einer Endlosschleife sein.&lt;/li>
+&lt;/ol>
+&lt;h1 id="routenplanung">Routenplanung&lt;/h1>
+&lt;p>Noch kein Optimaler Algorithmus gefunden&lt;/p>
+&lt;h2 id="dijkstra">Dijkstra&lt;/h2>
+&lt;ol>
+&lt;li>Alle Allen Knoten den Abstand ∞ zu weisen&lt;/li>
+&lt;li>Dem Startknoten den Wert 0 zu weisen&lt;/li>
+&lt;li>den Startknoten zum aktuellen Knoten machen&lt;/li>
+&lt;li>Falls ein Nachbarknoten einen höheren Abstand als der Abstand des eigenen Knoten + das Kantengewicht zum NAchbarknoten hat, diesen Wert erneuern&lt;/li>
+&lt;li>Selbiges auch Umgekehrt ausführen&lt;/li>
+&lt;li>Den aktuellen Knoten Markieren&lt;/li>
+&lt;li>Falls der Aktuelle Knoten nicht das Ziel war, den nicht markierten Knoten der den niedrigsten Abstand hat zum Aktuellen Knoten machen. Ansonsten Abbrechen&lt;/li>
+&lt;li>Zurück zu Schritt 4&lt;/li>
+&lt;/ol></content></item><item><title>Grundprinzipien des Datenschutzes</title><link>https://isiko.github.io/projects/abitur/computer-science/datenschutz/</link><pubDate>Mon, 07 Mar 2022 00:00:00 +0100</pubDate><guid>https://isiko.github.io/projects/abitur/computer-science/datenschutz/</guid><description> Verbot mit Erlaubnisvorbehalt Datenverarbeitung grundsätzlich verboten, essei denn die Person hat zugestimmt Datenminimierung Möglichst wenig Daten erheben / verarbeiten Wenn möglich Pseudo- oder Anonymisieren Daten löschen sobalt sie nicht mehr benötigt werden Zweckbindung Die Daten dürfen nur für einen bestimmten Zweck verwendet werden Tranzparenz Die Person deren Daten verarbeitet werden muss darüber Benachrichtig werden Ausnahme Strafverfolgung Erforderlichkeit Daten dürfen nur erhoben werden wenn sie auch benötigt werden oder sie etwas bedeutend einfacher machen</description><content>&lt;ul>
+&lt;li>Verbot mit Erlaubnisvorbehalt
+&lt;ul>
+&lt;li>Datenverarbeitung grundsätzlich verboten, essei denn die Person hat zugestimmt&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Datenminimierung
+&lt;ul>
+&lt;li>Möglichst wenig Daten erheben / verarbeiten&lt;/li>
+&lt;li>Wenn möglich Pseudo- oder Anonymisieren&lt;/li>
+&lt;li>Daten löschen sobalt sie nicht mehr benötigt werden&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Zweckbindung
+&lt;ul>
+&lt;li>Die Daten dürfen nur für einen bestimmten Zweck verwendet werden&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Tranzparenz
+&lt;ul>
+&lt;li>Die Person deren Daten verarbeitet werden muss darüber Benachrichtig werden&lt;/li>
+&lt;li>Ausnahme Strafverfolgung&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Erforderlichkeit
+&lt;ul>
+&lt;li>Daten dürfen nur erhoben werden wenn sie auch benötigt werden oder sie etwas bedeutend einfacher machen&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></content></item><item><title>Rechnernetze</title><link>https://isiko.github.io/projects/abitur/computer-science/rechnernetze/</link><pubDate>Mon, 07 Mar 2022 00:00:00 +0100</pubDate><guid>https://isiko.github.io/projects/abitur/computer-science/rechnernetze/</guid><description>Kommt noch</description><content>&lt;p>Kommt noch&lt;/p></content></item></channel></rss>
