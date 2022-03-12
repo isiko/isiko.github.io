@@ -16,11 +16,11 @@ readingTime: false
 > Diese Posts sind wahrscheinlich voller Rechtschreib Fehler, das liegt einfach daran das ich sie größtenteils an einem Nachmittag runter geschrieben habe ;D
 
 # Informatik
-- [Datenschutz](/projects/abitur/computer-science/datenschutz/)
-- [Daten und ihre Strukturen](/projects/abitur/computer-science/datenundstrukturen)
-- [Formale Sprachen](/projects/abitur/computer-science/automatentheorie)
-- [Graphen Theorie](/projects/abitur/computer-science/graphentheorie)
-- [Rechnernetze](/projects/abitur/computer-science/rechnernetze)
+- [Datenschutz](/abitur/computer-science/datenschutz/)
+- [Daten und ihre Strukturen](/abitur/computer-science/datenundstrukturen)
+- [Formale Sprachen](/abitur/computer-science/automatentheorie)
+- [Graphen Theorie](/abitur/computer-science/graphentheorie)
+- [Rechnernetze](/abitur/computer-science/rechnernetze)
 
 # SoWi
-- [Globalisierung](/projects/abitur/sowi/globalisierung/)
+- [Globalisierung](/abitur/sowi/globalisierung/)

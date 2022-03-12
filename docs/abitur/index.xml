@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>school on isiko404's Homepage</title><link>https://isiko.github.io/tags/school/</link><description>Recent content in school on isiko404's Homepage</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 07 Mar 2022 00:00:00 +0100</lastBuildDate><atom:link href="https://isiko.github.io/tags/school/index.xml" rel="self" type="application/rss+xml"/><item><title>Abitur</title><link>https://isiko.github.io/projects/abitur/</link><pubDate>Mon, 07 Mar 2022 00:00:00 +0100</pubDate><guid>https://isiko.github.io/projects/abitur/</guid><description> As I&amp;rsquo;m German and this is just for me and maby some of my classmates, I&amp;rsquo;ll be writing in German here.
-Diese Posts sind wahrscheinlich voller Rechtschreib Fehler, das liegt einfach daran das ich sie größtenteils an einem Nachmittag runter geschrieben habe ;D
-Informatik Datenschutz Daten und ihre Strukturen Formale Sprachen Graphen Theorie Rechnernetze SoWi Globalisierung</description><content>&lt;blockquote>
-&lt;p>As I&amp;rsquo;m German and this is just for me and maby some of my classmates, I&amp;rsquo;ll be writing in German here.&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>Diese Posts sind wahrscheinlich voller Rechtschreib Fehler, das liegt einfach daran das ich sie größtenteils an einem Nachmittag runter geschrieben habe ;D&lt;/p>
-&lt;/blockquote>
-&lt;h1 id="informatik">Informatik&lt;/h1>
-&lt;ul>
-&lt;li>&lt;a href="https://isiko.github.io/abitur/computer-science/datenschutz/">Datenschutz&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://isiko.github.io/abitur/computer-science/datenundstrukturen">Daten und ihre Strukturen&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://isiko.github.io/abitur/computer-science/automatentheorie">Formale Sprachen&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://isiko.github.io/abitur/computer-science/graphentheorie">Graphen Theorie&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://isiko.github.io/abitur/computer-science/rechnernetze">Rechnernetze&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h1 id="sowi">SoWi&lt;/h1>
-&lt;ul>
-&lt;li>&lt;a href="https://isiko.github.io/abitur/sowi/globalisierung/">Globalisierung&lt;/a>&lt;/li>
-&lt;/ul></content></item><item><title>Automatentheorie</title><link>https://isiko.github.io/abitur/computer-science/automatentheorie/</link><pubDate>Mon, 07 Mar 2022 00:00:00 +0100</pubDate><guid>https://isiko.github.io/abitur/computer-science/automatentheorie/</guid><description>Formale Sprachen und Grammatiken A sei ein Alphabet. Eine endlich Folge von Zeichen ∈ A heißt Wort. Das leere Wort ε besteht aus null Zeichen. A* ist die Menge aller endlich langer Wörter über A. Jede Teilmenge L von A*heißt formale Sprache über dem Alphabet A.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Abiturs on isiko404's Homepage</title><link>https://isiko.github.io/abitur/</link><description>Recent content in Abiturs on isiko404's Homepage</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 07 Mar 2022 00:00:00 +0100</lastBuildDate><atom:link href="https://isiko.github.io/abitur/index.xml" rel="self" type="application/rss+xml"/><item><title>Automatentheorie</title><link>https://isiko.github.io/abitur/computer-science/automatentheorie/</link><pubDate>Mon, 07 Mar 2022 00:00:00 +0100</pubDate><guid>https://isiko.github.io/abitur/computer-science/automatentheorie/</guid><description>Formale Sprachen und Grammatiken A sei ein Alphabet. Eine endlich Folge von Zeichen ∈ A heißt Wort. Das leere Wort ε besteht aus null Zeichen. A* ist die Menge aller endlich langer Wörter über A. Jede Teilmenge L von A*heißt formale Sprache über dem Alphabet A.
 Schriftlich sähe das dann so aus:
 A = {0|1} x = 01101
 Grammatiken Grammatika sind Regeln nach denen Wörter Produziert werden können. Sie werden als 4-Tupel angegeben:</description><content>&lt;h1 id="formale-sprachen-und-grammatiken">Formale Sprachen und Grammatiken&lt;/h1>
