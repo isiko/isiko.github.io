@@ -5,7 +5,7 @@ draft: true
 authorTwitter: "isi_ko404"
 tags: ["school", "SoWi", "globalisierung"]
 keywords: ["abitur", "a-levels", "SoWi", "politics"]
-description: "Hier gehts um Formale Sprachen und die Automaten die sie erkennen"
+description: "Globalisierung ist ein Wichtiges Thema. Sie hat große Probleme, aber auch viel gutes gebracht"
 showFullContent: false
 readingTime: false
 ---
