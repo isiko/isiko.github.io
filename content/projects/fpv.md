@@ -4,7 +4,8 @@ author: "Isaak"
 date: 2022-01-13T09:27:26+01:00
 draft: false
 authorTwitter: "isi_ko404"
-cover: "/img/covers/fpv.jpg"
+cover: 
+    image: "/img/covers/fpv.jpg"
 tags: ["fpv", "drone", "hardware"]
 keywords: ["FPV", "Drone"]
 description: "By now, most people should probably have heard of drones. However, most people only know camera drones, but there is a 2nd type, namely the FPV drones."

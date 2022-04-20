@@ -3,7 +3,8 @@ title: "Led Cube"
 date: 2022-02-17T10:57:42+01:00
 draft: false
 authorTwitter: "isi_ko404"
-cover: "/img/covers/ledCube.jpg"
+cover: 
+    image: "/img/covers/ledCube.jpg"
 tags: ["led", "pcb", "maker", "arduino"]
 keywords: ["led", "cube"]
 description: "Last year I set out to build 4x4x4 LED cubes for my family as Christmas gifts. Now, in February, they are ready!"
