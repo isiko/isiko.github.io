@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on isiko404</title>
+    <link>https://isiko.github.io/tags/</link>
+    <description>Recent content in Tags on isiko404</description>
+    <image>
+      <url>https://isiko.github.io/profile.png</url>
+      <link>https://isiko.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 17 Feb 2022 10:57:42 +0100</lastBuildDate><atom:link href="https://isiko.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>arduino</title>
+      <link>https://isiko.github.io/tags/arduino/</link>
+      <pubDate>Thu, 17 Feb 2022 10:57:42 +0100</pubDate>
+      
+      <guid>https://isiko.github.io/tags/arduino/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>led</title>
+      <link>https://isiko.github.io/tags/led/</link>
+      <pubDate>Thu, 17 Feb 2022 10:57:42 +0100</pubDate>
+      
+      <guid>https://isiko.github.io/tags/led/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>maker</title>
+      <link>https://isiko.github.io/tags/maker/</link>
+      <pubDate>Thu, 17 Feb 2022 10:57:42 +0100</pubDate>
+      
+      <guid>https://isiko.github.io/tags/maker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pcb</title>
+      <link>https://isiko.github.io/tags/pcb/</link>
+      <pubDate>Thu, 17 Feb 2022 10:57:42 +0100</pubDate>
+      
+      <guid>https://isiko.github.io/tags/pcb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>drone</title>
+      <link>https://isiko.github.io/tags/drone/</link>
+      <pubDate>Thu, 13 Jan 2022 09:27:26 +0100</pubDate>
+      
+      <guid>https://isiko.github.io/tags/drone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fpv</title>
+      <link>https://isiko.github.io/tags/fpv/</link>
+      <pubDate>Thu, 13 Jan 2022 09:27:26 +0100</pubDate>
+      
+      <guid>https://isiko.github.io/tags/fpv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hardware</title>
+      <link>https://isiko.github.io/tags/hardware/</link>
+      <pubDate>Thu, 13 Jan 2022 09:27:26 +0100</pubDate>
+      
+      <guid>https://isiko.github.io/tags/hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>advent</title>
+      <link>https://isiko.github.io/tags/advent/</link>
+      <pubDate>Sat, 25 Dec 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://isiko.github.io/tags/advent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c</title>
+      <link>https://isiko.github.io/tags/c/</link>
+      <pubDate>Sat, 25 Dec 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://isiko.github.io/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coding</title>
+      <link>https://isiko.github.io/tags/coding/</link>
+      <pubDate>Sat, 25 Dec 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://isiko.github.io/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

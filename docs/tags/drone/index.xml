@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>drone on isiko404</title>
+    <link>https://isiko.github.io/tags/drone/</link>
+    <description>Recent content in drone on isiko404</description>
+    <image>
+      <url>https://isiko.github.io/profile.png</url>
+      <link>https://isiko.github.io/profile.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Jan 2022 09:27:26 +0100</lastBuildDate><atom:link href="https://isiko.github.io/tags/drone/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flying FPV</title>
+      <link>https://isiko.github.io/projects/fpv/</link>
+      <pubDate>Thu, 13 Jan 2022 09:27:26 +0100</pubDate>
+      
+      <guid>https://isiko.github.io/projects/fpv/</guid>
+      <description>By now, most people should probably have heard of drones. However, most people only know camera drones, but there is a 2nd type, namely the FPV drones.</description>
+    </item>
+    
+  </channel>
+</rss>
