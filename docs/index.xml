@@ -38,5 +38,24 @@
       <description>I participated at Advent of Code this Year!</description>
     </item>
     
+    <item>
+      <title>About this Site</title>
+      <link>https://isiko.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://isiko.github.io/about/</guid>
+      <description>Hey! You made it to my homepage! I hope there&amp;rsquo;s a bit more content here when you see this, because I tend to put stuff off :D On this site I&amp;rsquo;ll try to write a little bit about my projects, so if there&amp;rsquo;s not much content you can head over to my Github profile, which you can find in the top menu, and look around there until I&amp;rsquo;ve done more here.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://isiko.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://isiko.github.io/contact/</guid>
+      <description>Email:  koerner@informatik-ag.net isihd.ko@gmail.com  Github @isiko
+Twitter @isi_ko404</description>
+    </item>
+    
   </channel>
 </rss>

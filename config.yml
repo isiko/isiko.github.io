@@ -59,14 +59,16 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: isi_ko404
-    subtitle: "Self taught Programmer in Java (Kotlin) and NodeJS. Did Stuff with HTML, CSS, and Python. Also exploring the possibilities of ROS"
+    subtitle: "Self taught Programmer in Java (Kotlin) and NodeJS. Did Stuff with HTML, CSS, and Python. Also exploring the possibilities of ROS."
     imageUrl: "profile.png"
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
     buttons:
-      # - name: Projects / Blog
-      #   url: projects
+      - name: Projects
+        url: projects
+      - name: Tags
+        url: tags
 
   # home-info mode
   # homeInfoParams:
@@ -113,14 +115,22 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: blog
-      name: blog
-      url: /projects/
+    - identifier: about
+      name: about
+      url: /about
       weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 20
+    - identifier: contact
+      name: contact
+      url: /contact
+      weight: 10
+    # - identifier: blog
+    #   name: blog
+    #   url: /projects/
+    #   weight: 20
+    # - identifier: tags
+    #   name: tags
+    #   url: /tags/
+    #   weight: 20
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
 # markup:
